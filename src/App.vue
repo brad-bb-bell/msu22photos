@@ -1,26 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>MSU 2022 Photos of the Year</h1>
+  </div>
+  <ImageLightbox :thumbnail="images[0]" :images="images" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ImageLightbox from "./components/ImageLightbox.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    ImageLightbox,
+  },
+  data() {
+    return {
+      images: ["image-one.png", "image-two.jpeg", "image-three.jpeg", "image-four.jpeg", "image-five.jpeg"],
+    };
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
