@@ -1,13 +1,12 @@
 <template>
   <div>
-    <a href="#" @click.prevent="show" class="w-full">
-      <img class="w-64" :src="require(`@/assets/${images[0]}`)" />
-      <img class="w-64" :src="require(`@/assets/${images[1]}`)" />
-      <img class="w-64" :src="require(`@/assets/${images[2]}`)" />
-      <img class="w-64" :src="require(`@/assets/${images[3]}`)" />
-      <img class="w-64" :src="require(`@/assets/${images[4]}`)" />
+    <a href="#" class="w-full">
+      <div v-for="image in images" :key="image">
+        <img @click.prevent="show(image)" class="w-64" :src="require(`@/assets/${image}`)" />
+      </div>
     </a>
     <div class="lightbox fixed pin z-50 flex justify-center items-center" v-if="visible" @click="hide">
+      <!-- this is the line for the x to close the lightbox... needs to be moved to top right -->
       <div class="fixed pin-r pin-t text-white cursor-pointer text-4xl p-1 mr-2" @click.stop="hide">&times;</div>
       <div class="flex">
         <div class="cursor-pointer self-center px-8" @click.stop="prev" :class="{ invisible: !hasPrev() }">
@@ -62,7 +61,8 @@ export default {
     };
   },
   methods: {
-    show() {
+    show(image) {
+      this.index = this.images.indexOf(image);
       this.visible = true;
     },
     hide() {
