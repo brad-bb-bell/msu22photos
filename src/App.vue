@@ -16,12 +16,13 @@ export default {
   data() {
     return {
       images: [
-        "image-one.png",
-        "image-two.jpeg",
+        "image-one.jpg",
+        "image-two.jpg",
         "image-three.jpeg",
-        "image-four.jpeg",
-        "image-five.jpeg",
+        "image-four.jpg",
+        "image-five.jpg",
         "image-six.jpg",
+        "image-seven.jpg",
       ],
     };
   },

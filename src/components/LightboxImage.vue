@@ -1,6 +1,6 @@
 <template>
   <div @click.stop="">
-    <img :src="require(`@/assets/${images[index]}`)" />
+    <img :src="require(`@/assets/${images[index]}`)" class="object-fill" />
   </div>
 </template>
 
@@ -12,9 +12,4 @@ export default {
   },
 };
 </script>
-<style>
-.lightbox-image img {
-  width: 100%;
-  max-width: 100%;
-}
-</style>
+<style></style>
