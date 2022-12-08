@@ -1,14 +1,22 @@
 <template>
   <div>
     <a href="#" class="w-full">
-      <div v-for="image in images" :key="image">
-        <img @click.prevent="show(image)" class="w-64" :src="require(`@/assets/${image}`)" />
+      <div v-for="(image, index) in images" :key="index">
+        <img @click.prevent="show(index)" class="w-64" :src="require(`@/assets/${image}`)" />
       </div>
     </a>
-    <div class="lightbox fixed pin z-50 flex justify-center items-center" v-if="visible" @click="hide">
-      <!-- this is the line for the x to close the lightbox... needs to be moved to top right -->
-      <div class="fixed pin-r pin-t text-white cursor-pointer text-4xl p-1 mr-2" @click.stop="hide">&times;</div>
+
+    <div
+      class="lightbox absolute top-0 right-0 left-0 bottom-0 z-50 flex justify-center items-center"
+      v-if="visible"
+      @click="hide"
+    >
+      <!-- x icon... needs to be moved to top right -->
+      <div class="absolute top-0 right-0 text-white cursor-pointer text-4xl p-1 mr-2" @click.stop="hide">&times;</div>
+      <!-- x icon -->
+
       <div class="flex">
+        <!-- previous image icon -->
         <div class="cursor-pointer self-center px-8" @click.stop="prev" :class="{ invisible: !hasPrev() }">
           <svg
             class="pointer-events-none"
@@ -22,9 +30,13 @@
             <path d="M0-.5h24v24H0z" fill="none" />
           </svg>
         </div>
+        <!-- previous image icon -->
+
         <div class="lightbox-image" @click.stop="">
           <img :src="require(`@/assets/${images[index]}`)" />
         </div>
+
+        <!-- next image icon -->
         <div class="cursor-pointer self-center px-8" @click.stop="next" :class="{ invisible: !hasNext() }">
           <svg
             class="pointer-events-none"
@@ -38,6 +50,7 @@
             <path d="M0-.25h24v24H0z" fill="none" />
           </svg>
         </div>
+        <!-- next image icon -->
       </div>
     </div>
   </div>
@@ -46,10 +59,6 @@
 <script>
 export default {
   props: {
-    thumbnail: {
-      type: String,
-      required: true,
-    },
     images: {
       type: Array,
     },
@@ -61,8 +70,9 @@ export default {
     };
   },
   methods: {
-    show(image) {
-      this.index = this.images.indexOf(image);
+    show(index) {
+      this.index = index;
+      // this.index = this.images.indexOf(image);
       this.visible = true;
     },
     hide() {
@@ -119,9 +129,7 @@ export default {
   background: rgba(0, 0, 0, 0.8);
 }
 .lightbox-image img {
-  width: auto;
-  height: auto;
+  width: 100%;
   max-width: 100%;
-  max-height: calc(100vh - 90px);
 }
 </style>
