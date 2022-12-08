@@ -32,9 +32,7 @@
         </div>
         <!-- previous image icon -->
 
-        <div class="lightbox-image" @click.stop="">
-          <img :src="require(`@/assets/${images[index]}`)" />
-        </div>
+        <LightboxImage :images="images" :index="index" />
 
         <!-- next image icon -->
         <div class="cursor-pointer self-center px-8" @click.stop="next" :class="{ invisible: !hasNext() }">
@@ -57,11 +55,15 @@
 </template>
 
 <script>
+import LightboxImage from "./LightboxImage.vue";
 export default {
   props: {
     images: {
       type: Array,
     },
+  },
+  components: {
+    LightboxImage,
   },
   data() {
     return {
@@ -72,7 +74,6 @@ export default {
   methods: {
     show(index) {
       this.index = index;
-      // this.index = this.images.indexOf(image);
       this.visible = true;
     },
     hide() {
@@ -127,9 +128,5 @@ export default {
 <style>
 .lightbox {
   background: rgba(0, 0, 0, 0.8);
-}
-.lightbox-image img {
-  width: 100%;
-  max-width: 100%;
 }
 </style>
