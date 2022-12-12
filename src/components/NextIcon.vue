@@ -1,5 +1,9 @@
 <template>
-  <div class="cursor-pointer self-center px-8" @click.stop="$emit('next')" :class="{ invisible: !hasNext() }">
+  <div
+    class="absolute right-0 cursor-pointer self-center px-8"
+    @click.stop="$emit('next')"
+    :class="{ invisible: !hasNext() }"
+  >
     <div class="w-12 h-12 bg-black flex justify-center rounded-full">
       <svg
         class="pointer-events-none"

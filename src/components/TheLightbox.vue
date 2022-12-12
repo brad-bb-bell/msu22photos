@@ -5,18 +5,15 @@
         <img @click.prevent="show(index)" class="w-64" :src="require(`@/assets/${image}`)" />
       </div>
     </a>
-
     <div
       class="lightbox absolute top-0 right-0 left-0 bottom-0 z-50 flex justify-center items-center"
       v-if="visible"
       @click="hide"
     >
       <CloseIcon @hide="hide" />
-      <div class="flex">
-        <PreviousIcon :index="index" @prev="prev" />
-        <LightboxImage :images="images" :index="index" />
-        <NextIcon :index="index" :length="this.images.length" @next="next" />
-      </div>
+      <PreviousIcon :index="index" @prev="prev" />
+      <LightboxImage :images="images" :index="index" />
+      <NextIcon :index="index" :length="this.images.length" @next="next" />
     </div>
   </div>
 </template>
@@ -38,7 +35,6 @@ export default {
     PreviousIcon,
     NextIcon,
   },
-  emits: ["hide"],
   data() {
     return {
       visible: false,

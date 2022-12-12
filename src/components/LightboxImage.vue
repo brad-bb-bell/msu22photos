@@ -1,6 +1,6 @@
 <template>
   <div @click.stop="">
-    <img :src="require(`@/assets/${images[index]}`)" class="object-fill" />
+    <img :src="require(`@/assets/${images[index]}`)" class="" />
   </div>
 </template>
 

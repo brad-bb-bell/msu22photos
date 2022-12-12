@@ -1,5 +1,9 @@
 <template>
-  <div class="cursor-pointer self-center px-8" @click.stop="$emit('prev')" :class="{ invisible: !hasPrev() }">
+  <div
+    class="absolute inset-x-0 cursor-pointer self-center px-8"
+    @click.stop="$emit('prev')"
+    :class="{ invisible: !hasPrev() }"
+  >
     <div class="w-12 h-12 bg-black flex justify-center rounded-full">
       <svg
         class="pointer-events-none"
