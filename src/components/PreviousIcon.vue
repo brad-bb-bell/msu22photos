@@ -1,6 +1,6 @@
 <template>
   <div
-    class="absolute inset-x-0 cursor-pointer self-center px-8"
+    class="absolute left-0 cursor-pointer self-center px-8"
     @click.stop="$emit('prev')"
     :class="{ invisible: !hasPrev() }"
   >
