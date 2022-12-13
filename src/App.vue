@@ -4,11 +4,11 @@
   </div>
 
   <div>
-    <a href="#" class="w-full">
-      <div class="container grid grid-cols-3 gap-2 mx-auto">
-        <div v-for="(image, index) in images" :key="index">
-          <div class="w-72">
-            <img @click.prevent="show(index)" :src="require(`@/assets/${image}`)" />
+    <a href="#">
+      <div class="container">
+        <div class="grid">
+          <div v-for="(image, index) in images" :key="index">
+            <img class="w-full h-full" @click.prevent="show(index)" :src="require(`@/assets/${image}`)" />
           </div>
         </div>
       </div>
@@ -20,68 +20,50 @@
       v-if="visible"
       @click="hide"
     >
-      <!-- close -->
-      <div class="absolute top-0 right-0 text-white cursor-pointer text-4xl p-1 mr-2" @click.stop="hide">
-        <div class="w-12 h-12 bg-black flex justify-center rounded-full">&times;</div>
-      </div>
-      <!-- close -->
+      <TheCircle class="absolute top-0 right-0 text-white cursor-pointer text-3xl p-1 mr-2" @click.stop="hide">
+        &times;
+      </TheCircle>
 
-      <!-- prev -->
       <div
         class="absolute left-0 cursor-pointer self-center px-8"
         @click.stop="prev"
         :class="{ invisible: !hasPrev() }"
       >
-        <div class="w-12 h-12 bg-black flex justify-center rounded-full">
-          <svg
-            class="pointer-events-none"
-            fill="#fff"
-            height="48"
-            viewBox="0 0 24 24"
-            width="48"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z" />
-            <path d="M0-.5h24v24H0z" fill="none" />
-          </svg>
-        </div>
+        <TheCircle>
+          <PrevIcon />
+        </TheCircle>
       </div>
-      <!-- prev -->
 
       <div @click.stop="">
-        <img :src="require(`@/assets/${images[index]}`)" class="" />
+        <img :src="require(`@/assets/${images[index]}`)" />
       </div>
 
-      <!-- next -->
       <div
         class="absolute right-0 cursor-pointer self-center px-8"
         @click.stop="next"
         :class="{ invisible: !hasNext() }"
       >
-        <div class="w-12 h-12 bg-black flex justify-center rounded-full">
-          <svg
-            class="pointer-events-none"
-            fill="#fff"
-            height="48"
-            viewBox="0 0 24 24"
-            width="48"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
-            <path d="M0-.25h24v24H0z" fill="none" />
-          </svg>
-        </div>
+        <TheCircle>
+          <NextIcon />
+        </TheCircle>
       </div>
-      <!-- next -->
     </div>
     <!-- lightbox -->
   </div>
 </template>
 
 <script>
+import TheCircle from "./components/TheCircle.vue";
+import NextIcon from "./assets/icons/IconNext.vue";
+import PrevIcon from "./assets/icons/IconPrev.vue";
+
 export default {
   name: "App",
-  components: {},
+  components: {
+    TheCircle,
+    NextIcon,
+    PrevIcon,
+  },
   data() {
     return {
       visible: false,
@@ -155,5 +137,10 @@ export default {
 <style>
 .lightbox {
   background: rgba(0, 0, 0, 0.8);
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
 }
 </style>
