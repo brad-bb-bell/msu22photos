@@ -1,14 +1,22 @@
 <template>
   <div>
-    <h1>MSU 2022 Photos of the Year</h1>
+    <div class="container relative">
+      <img style="opacity: 0.6" :src="require(`@/assets/${images[2]}`)" />
+      <div
+        class="absolute inset-0 flex items-center justify-center text-center text-4xl font-serif font-bold text-blue-900 tracking-wider"
+      >
+        Montana State University
+        <br />
+        2022 Photos of the Year
+      </div>
+    </div>
   </div>
-
   <div>
     <a href="#">
       <div class="container">
         <div class="grid">
           <div v-for="(image, index) in images" :key="index">
-            <img class="w-full h-full" @click.prevent="show(index)" :src="require(`@/assets/${image}`)" />
+            <v-lazy-image class="w-full h-full" @click.prevent="show(index)" :src="require(`@/assets/${image}`)" />
           </div>
         </div>
       </div>
@@ -56,6 +64,7 @@
 import TheCircle from "./components/TheCircle.vue";
 import NextIcon from "./assets/icons/IconNext.vue";
 import PrevIcon from "./assets/icons/IconPrev.vue";
+import VLazyImage from "v-lazy-image";
 
 export default {
   name: "App",
@@ -63,6 +72,7 @@ export default {
     TheCircle,
     NextIcon,
     PrevIcon,
+    VLazyImage,
   },
   data() {
     return {
@@ -177,5 +187,12 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 8px;
+}
+.v-lazy-image {
+  filter: blur(10px);
+  transition: filter 0.7s;
+}
+.v-lazy-image-loaded {
+  filter: blur(0);
 }
 </style>
