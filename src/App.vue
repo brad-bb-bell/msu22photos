@@ -129,10 +129,12 @@ export default {
     show(index) {
       this.index = index;
       this.visible = true;
+      document.body.classList.add("lightbox-open");
     },
     hide() {
       this.visible = false;
       this.index = 0;
+      document.body.classList.remove("lightbox-open");
     },
     hasNext() {
       return this.index + 1 < this.images.length;
@@ -183,6 +185,9 @@ export default {
 <style>
 .lightbox {
   background: rgba(0, 0, 0, 0.8);
+}
+.lightbox-open {
+  overflow: hidden;
 }
 .grid {
   display: grid;
