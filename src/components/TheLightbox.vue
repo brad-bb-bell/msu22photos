@@ -49,10 +49,10 @@ export default {
   },
   methods: {
     hasNext() {
-      return this.index + 1 < this.images.length;
+      return this.position + 1 < this.images.length;
     },
     hasPrev() {
-      return this.index - 1 >= 0;
+      return this.position - 1 >= 0;
     },
     next() {
       if (this.hasNext()) {
