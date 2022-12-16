@@ -64,9 +64,31 @@ export default {
         this.position -= 1;
       }
     },
+    onKeydown(e) {
+      switch (e.key) {
+        case "ArrowRight":
+          this.next();
+          break;
+        case "ArrowLeft":
+          this.prev();
+          break;
+        case "ArrowDown":
+        case "ArrowUp":
+        case " ":
+          e.preventDefault();
+          break;
+        case "Escape":
+          this.$emit("close");
+          break;
+      }
+    },
   },
   mounted() {
     this.position = this.index;
+    window.addEventListener("keydown", this.onKeydown);
+  },
+  unmounted() {
+    window.removeEventListener("keydown", this.onKeydown);
   },
 };
 </script>

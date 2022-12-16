@@ -1,8 +1,8 @@
 <template>
   <div class="relative">
-    <img class="w-full" style="opacity: 0.6" :src="require(`@/assets/${images[2]}`)" />
+    <img class="w-full" style="opacity: 0.6" :src="require(`@/assets/${images[16]}`)" />
     <div
-      class="absolute inset-0 flex items-center justify-center text-center text-4xl font-serif font-bold text-blue-900 tracking-wider"
+      class="absolute inset-0 flex items-center justify-center text-center text-4xl font-serif font-bold text-[#002a61] tracking-wider"
     >
       Montana State University
       <br />
@@ -22,7 +22,7 @@
     </a>
 
     <Teleport to="body">
-      <TheLightbox :images="images" :index="index" v-if="visible" @close="hide()"></TheLightbox>
+      <TheLightbox :images="images" :index="index" v-if="visible" @close="hide()" />
     </Teleport>
   </div>
 </template>
@@ -96,32 +96,6 @@ export default {
       this.visible = false;
       document.getElementsByTagName("body")[0].style.overflow = "auto";
     },
-    onKeydown(e) {
-      if (this.visible) {
-        switch (e.key) {
-          case "ArrowRight":
-            this.next();
-            break;
-          case "ArrowLeft":
-            this.prev();
-            break;
-          case "ArrowDown":
-          case "ArrowUp":
-          case " ":
-            e.preventDefault();
-            break;
-          case "Escape":
-            this.hide();
-            break;
-        }
-      }
-    },
-  },
-  mounted() {
-    window.addEventListener("keydown", this.onKeydown);
-  },
-  unmounted() {
-    window.removeEventListener("keydown", this.onKeydown);
   },
 };
 </script>
