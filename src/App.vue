@@ -24,7 +24,7 @@
     <!-- lightbox -->
     <div class="w-full h-full">
       <div
-        class="lightbox absolute top-0 right-0 left-0 bottom-0 z-50 flex justify-center items-center"
+        class="lightbox fixed top-0 right-0 left-0 bottom-0 z-50 flex justify-center items-center"
         v-if="visible"
         @click="hide"
       >
