@@ -1,16 +1,15 @@
 <template>
-  <div>
-    <div class="container relative">
-      <img style="opacity: 0.6" :src="require(`@/assets/${images[2]}`)" />
-      <div
-        class="absolute inset-0 flex items-center justify-center text-center text-4xl font-serif font-bold text-blue-900 tracking-wider"
-      >
-        Montana State University
-        <br />
-        2022 Photos of the Year
-      </div>
+  <div class="relative">
+    <img class="w-full" style="opacity: 0.6" :src="require(`@/assets/${images[2]}`)" />
+    <div
+      class="absolute inset-0 flex items-center justify-center text-center text-4xl font-serif font-bold text-blue-900 tracking-wider"
+    >
+      Montana State University
+      <br />
+      2022 Photos of the Year
     </div>
   </div>
+
   <div>
     <a href="#">
       <div class="container">
@@ -23,37 +22,39 @@
     </a>
 
     <!-- lightbox -->
-    <div
-      class="lightbox absolute top-0 right-0 left-0 bottom-0 z-50 flex justify-center items-center"
-      v-if="visible"
-      @click="hide"
-    >
-      <TheCircle class="absolute top-0 right-0 text-white cursor-pointer text-3xl p-1 mr-2" @click.stop="hide">
-        &times;
-      </TheCircle>
-
+    <div class="w-full h-full">
       <div
-        class="absolute left-0 cursor-pointer self-center px-8"
-        @click.stop="prev"
-        :class="{ invisible: !hasPrev() }"
+        class="lightbox absolute top-0 right-0 left-0 bottom-0 z-50 flex justify-center items-center"
+        v-if="visible"
+        @click="hide"
       >
-        <TheCircle>
-          <PrevIcon />
+        <TheCircle class="absolute top-0 right-0 text-white cursor-pointer text-3xl p-1 mr-2" @click.stop="hide">
+          &times;
         </TheCircle>
-      </div>
 
-      <div @click.stop="">
-        <img :src="require(`@/assets/${images[index]}`)" />
-      </div>
+        <div
+          class="absolute left-0 cursor-pointer self-center px-8"
+          @click.stop="prev"
+          :class="{ invisible: !hasPrev() }"
+        >
+          <TheCircle>
+            <PrevIcon />
+          </TheCircle>
+        </div>
 
-      <div
-        class="absolute right-0 cursor-pointer self-center px-8"
-        @click.stop="next"
-        :class="{ invisible: !hasNext() }"
-      >
-        <TheCircle>
-          <NextIcon />
-        </TheCircle>
+        <div @click.stop="">
+          <img :src="require(`@/assets/${images[index]}`)" />
+        </div>
+
+        <div
+          class="absolute right-0 cursor-pointer self-center px-8"
+          @click.stop="next"
+          :class="{ invisible: !hasNext() }"
+        >
+          <TheCircle>
+            <NextIcon />
+          </TheCircle>
+        </div>
       </div>
     </div>
     <!-- lightbox -->
@@ -190,7 +191,7 @@ export default {
 }
 .v-lazy-image {
   filter: blur(10px);
-  transition: filter 0.7s;
+  transition: filter 0.3s;
 }
 .v-lazy-image-loaded {
   filter: blur(0);
