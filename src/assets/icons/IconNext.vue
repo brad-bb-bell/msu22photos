@@ -1,13 +1,8 @@
 <template>
-  <svg
-    class="pointer-events-none"
-    fill="#fff"
-    height="48"
-    viewBox="0 0 24 24"
-    width="48"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
-    <path d="M0-.25h24v24H0z" fill="none" />
+  <svg class="fill-[#002a61]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+    <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+    <path
+      d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+    />
   </svg>
 </template>

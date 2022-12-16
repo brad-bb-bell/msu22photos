@@ -21,58 +21,19 @@
       </div>
     </a>
 
-    <!-- lightbox -->
-    <div class="w-full h-full">
-      <div
-        class="lightbox fixed top-0 right-0 left-0 bottom-0 z-50 flex justify-center items-center"
-        v-if="visible"
-        @click="hide"
-      >
-        <TheCircle class="absolute top-0 right-0 text-white cursor-pointer text-3xl p-1 mr-2" @click.stop="hide">
-          &times;
-        </TheCircle>
-
-        <div
-          class="absolute left-0 cursor-pointer self-center px-8"
-          @click.stop="prev"
-          :class="{ invisible: !hasPrev() }"
-        >
-          <TheCircle>
-            <PrevIcon />
-          </TheCircle>
-        </div>
-
-        <div @click.stop="">
-          <img :src="require(`@/assets/${images[index]}`)" />
-        </div>
-
-        <div
-          class="absolute right-0 cursor-pointer self-center px-8"
-          @click.stop="next"
-          :class="{ invisible: !hasNext() }"
-        >
-          <TheCircle>
-            <NextIcon />
-          </TheCircle>
-        </div>
-      </div>
-    </div>
-    <!-- lightbox -->
+    <Teleport to="body">
+      <TheLightbox :images="images" :index="index" v-if="visible" @close="hide()"></TheLightbox>
+    </Teleport>
   </div>
 </template>
 
 <script>
-import TheCircle from "./components/TheCircle.vue";
-import NextIcon from "./assets/icons/IconNext.vue";
-import PrevIcon from "./assets/icons/IconPrev.vue";
+import TheLightbox from "../components/TheLightbox.vue";
 import VLazyImage from "v-lazy-image";
 
 export default {
-  name: "App",
   components: {
-    TheCircle,
-    NextIcon,
-    PrevIcon,
+    TheLightbox,
     VLazyImage,
   },
   data() {
@@ -129,28 +90,11 @@ export default {
     show(index) {
       this.index = index;
       this.visible = true;
-      document.body.classList.add("lightbox-open");
+      document.getElementsByTagName("body")[0].style.overflow = "hidden";
     },
     hide() {
       this.visible = false;
-      this.index = 0;
-      document.body.classList.remove("lightbox-open");
-    },
-    hasNext() {
-      return this.index + 1 < this.images.length;
-    },
-    hasPrev() {
-      return this.index - 1 >= 0;
-    },
-    next() {
-      if (this.hasNext()) {
-        this.index += 1;
-      }
-    },
-    prev() {
-      if (this.hasPrev()) {
-        this.index -= 1;
-      }
+      document.getElementsByTagName("body")[0].style.overflow = "auto";
     },
     onKeydown(e) {
       if (this.visible) {
@@ -183,12 +127,6 @@ export default {
 </script>
 
 <style>
-.lightbox {
-  background: rgba(0, 0, 0, 0.8);
-}
-.lightbox-open {
-  overflow: hidden;
-}
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

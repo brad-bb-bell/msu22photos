@@ -1,0 +1,72 @@
+<template>
+  <div class="fixed w-screen h-screen top-0 bg-black/80">
+    <div class="w-full h-full flex justify-center items-center">
+      <button class="absolute top-3 right-3" @click="$emit('close')">
+        <TheCircle>
+          <CloseIcon />
+        </TheCircle>
+      </button>
+
+      <button class="absolute left-3" @click.stop="prev" v-if="hasPrev()">
+        <TheCircle>
+          <PrevIcon />
+        </TheCircle>
+      </button>
+
+      <div @click.stop="">
+        <img :src="require(`@/assets/${images[position]}`)" />
+      </div>
+
+      <button class="absolute right-3" @click.stop="next" v-if="hasNext()">
+        <TheCircle>
+          <NextIcon />
+        </TheCircle>
+      </button>
+    </div>
+  </div>
+</template>
+<script>
+import TheCircle from "../components/TheCircle.vue";
+import NextIcon from "../assets/icons/IconNext.vue";
+import PrevIcon from "../assets/icons/IconPrev.vue";
+import CloseIcon from "../assets/icons/IconClose.vue";
+
+export default {
+  components: {
+    TheCircle,
+    NextIcon,
+    PrevIcon,
+    CloseIcon,
+  },
+  props: {
+    images: Array,
+    index: Number,
+  },
+  data() {
+    return {
+      position: 0,
+    };
+  },
+  methods: {
+    hasNext() {
+      return this.index + 1 < this.images.length;
+    },
+    hasPrev() {
+      return this.index - 1 >= 0;
+    },
+    next() {
+      if (this.hasNext()) {
+        this.position += 1;
+      }
+    },
+    prev() {
+      if (this.hasPrev()) {
+        this.position -= 1;
+      }
+    },
+  },
+  mounted() {
+    this.position = this.index;
+  },
+};
+</script>
