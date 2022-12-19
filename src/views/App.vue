@@ -12,7 +12,7 @@
 
   <div>
     <a href="#">
-      <div class="container">
+      <div class="container w-4/5 p-4 ml-auto mr-auto">
         <div class="grid">
           <div v-for="(image, index) in images" :key="index">
             <v-lazy-image class="w-full h-full" @click.prevent="show(index)" :src="require(`@/assets/${image}`)" />
