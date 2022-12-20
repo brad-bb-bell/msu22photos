@@ -124,6 +124,14 @@ export default {
         "image-fortytwo.jpg",
         "image-nineteen.jpg",
       ],
+      images: [
+        {
+          full: "academic-life/image-thirteen.jpeg",
+          thumb: "",
+          alt: "",
+          caption: "",
+        },
+      ],
     };
   },
   methods: {
