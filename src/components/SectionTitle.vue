@@ -3,13 +3,13 @@
   <p
     class="inset-0 flex items-center justify-center text-center text-4xl font-serif font-bold text-[#002a61] tracking-wider"
   >
-    {{ title }}
+    {{ text }}
   </p>
 </template>
 <script>
 export default {
   props: {
-    title: String,
+    text: String,
   },
 };
 </script>
