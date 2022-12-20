@@ -1,16 +1,14 @@
 <template>
   <div class="relative">
-    <img class="w-full" style="opacity: 1" src="../assets/images/title-image.jpg" />
-    <p
-      class="absolute inset-0 flex items-center justify-center text-center text-4xl font-serif font-bold text-white tracking-wider"
-    >
-      An Extraordinary Year
-    </p>
-    <p
-      class="absolute inset-0 pt-20 flex items-center justify-center text-center text-xl font-serif italic text-white tracking-wider"
-    >
-      Favorite images of Montana State University's photographers from 2022
-    </p>
+    <ImageBase :image="images[32].full" />
+    <div class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]">
+      <h1 class="text-center mb-6 text-2xl md:text-5xl xl:text-7xl font-serif font-bold text-white">
+        An Extraordinary Year
+      </h1>
+      <p class="text-center text-xl italic text-white">
+        Favorite images of Montana State University's photographers from 2022
+      </p>
+    </div>
   </div>
 
   <TextBase :headline="this.text[0].headline" :text="this.text[0].text" />
@@ -273,6 +271,12 @@ export default {
           alt: "",
           caption: "",
         },
+        {
+          full: "title-image.jpg",
+          thumb: "",
+          alt: "",
+          caption: "",
+        },
       ],
     };
   },
@@ -298,4 +302,10 @@ export default {
 .v-lazy-image-loaded {
   filter: blur(0);
 }
+
+/* @media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 30px !important;
+  }
+} */
 </style>
