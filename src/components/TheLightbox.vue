@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed w-screen h-screen top-0 bg-black/80">
+  <div class="fixed w-screen h-screen top-0 bg-black">
     <div class="w-full h-full flex justify-center items-center">
       <button class="absolute top-3 right-3" @click="$emit('close')">
         <TheCircle>
@@ -14,7 +14,7 @@
       </button>
 
       <div @click.stop="">
-        <img :src="require(`@/assets/${images[position]}`)" />
+        <img :src="require(`@/assets/images/${images[position].full}`)" />
       </div>
 
       <button class="absolute right-3" @click.stop="next" v-if="hasNext()">

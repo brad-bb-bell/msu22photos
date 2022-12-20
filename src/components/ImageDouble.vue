@@ -1,18 +1,20 @@
 <template>
-  <div class="grid gap-2 grid-cols-2 w-full h-full">
-    <v-lazy-image @click.prevent="show(index)" :src="require(`@/assets/images/${image1}`)" />
-    <v-lazy-image @click.prevent="show(index)" :src="require(`@/assets/images/${image2}`)" />
+  <div class="grid gap-2 grid-cols-2">
+    <ImageBase :image="imageLeft" @show="$emit('show', indexLeft)" />
+    <ImageBase :image="imageRight" @show="$emit('show', indexRight)" />
   </div>
 </template>
 <script>
-import VLazyImage from "v-lazy-image";
+import ImageBase from "./ImageBase.vue";
 export default {
   components: {
-    VLazyImage,
+    ImageBase,
   },
   props: {
-    image1: String,
-    image2: String,
+    imageLeft: String,
+    imageRight: String,
+    indexLeft: Number,
+    indexRight: Number,
   },
 };
 </script>

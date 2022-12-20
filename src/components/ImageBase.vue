@@ -1,7 +1,5 @@
 <template>
-  <div class="grid-cols-1 w-full h-full">
-    <v-lazy-image class="" @click.prevent="show(index)" :src="require(`@/assets/images/${image}`)" />
-  </div>
+  <v-lazy-image class="w-full mb-2" @click.prevent="$emit('show')" :src="require(`@/assets/images/${image}`)" />
 </template>
 <script>
 import VLazyImage from "v-lazy-image";
