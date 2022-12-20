@@ -1,28 +1,47 @@
 <template>
   <div class="relative">
-    <img class="w-full" style="opacity: 0.6" :src="require(`@/assets/images/scenic/${images[16]}`)" />
-    <div
-      class="absolute inset-0 flex items-center justify-center text-center text-4xl font-serif font-bold text-[#002a61] tracking-wider"
+    <img class="w-full" style="opacity: 1" src="../assets/images/campus-life/image-forty.jpg" />
+    <p
+      class="absolute inset-0 flex items-center justify-center text-center text-4xl font-serif font-bold text-white tracking-wider"
     >
-      Montana State University
-      <br />
+      Welcome to MSU
+    </p>
+    <p
+      class="absolute inset-0 pt-20 flex items-center justify-center text-center text-2xl font-serif italic text-white tracking-wider"
+    >
       2022 Photos of the Year
-    </div>
+    </p>
+  </div>
+
+  <div>
+    <SectionTitle title="Academic Life" />
+    <SectionDescription
+      description="Academic Life Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+    laborum."
+    />
   </div>
 
   <div>
     <a href="#">
       <div class="container w-4/5 p-4 ml-auto mr-auto">
+        <v-lazy-image :src="require(`@/assets/images/academic-life/image-thirteen.jpeg`)" />
         <div class="grid">
-          <div v-for="(image, index) in images" :key="index">
-            <v-lazy-image class="w-full h-full" @click.prevent="show(index)" :src="require(`@/assets/${image}`)" />
+          <div v-for="(image, index) in academicImages" :key="index">
+            <v-lazy-image
+              class="w-full h-full"
+              @click.prevent="show(index)"
+              :src="require(`@/assets/images/academic-life/${image}`)"
+            />
           </div>
         </div>
       </div>
     </a>
 
     <Teleport to="body">
-      <TheLightbox :images="images" :index="index" v-if="visible" @close="hide()" />
+      <TheLightbox :images="academicImages" :index="index" v-if="visible" @close="hide()" />
     </Teleport>
   </div>
 </template>
@@ -30,11 +49,15 @@
 <script>
 import TheLightbox from "../components/TheLightbox.vue";
 import VLazyImage from "v-lazy-image";
+import SectionTitle from "../components/SectionTitle.vue";
+import SectionDescription from "../components/SectionDescription.vue";
 
 export default {
   components: {
     TheLightbox,
     VLazyImage,
+    SectionTitle,
+    SectionDescription,
   },
   data() {
     return {
