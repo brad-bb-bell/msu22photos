@@ -170,7 +170,7 @@ export default {
       ],
       images: [
         {
-          full: "academic-life/academic-one.jpeg",
+          full: "academic-life/academic-one.jpg",
           thumb: "academic-life/academic-one-thumb.jpg",
           alt: "",
           caption: "",
@@ -184,7 +184,7 @@ export default {
           cred: "",
         },
         {
-          full: "academic-life/academic-three.jpeg",
+          full: "academic-life/academic-three.jpg",
           thumb: "academic-life/academic-three-thumb.jpg",
           alt: "",
           caption: "",
@@ -198,7 +198,7 @@ export default {
           cred: "",
         },
         {
-          full: "academic-life/academic-five.jpeg",
+          full: "academic-life/academic-five.jpg",
           thumb: "academic-life/academic-five-thumb.jpg",
           alt: "",
           caption: "",
@@ -226,7 +226,7 @@ export default {
           cred: "",
         },
         {
-          full: "campus-life/campus-three.jpeg",
+          full: "campus-life/campus-three.jpg",
           thumb: "campus-life/campus-three-thumb.jpg",
           alt: "",
           caption: "",
@@ -291,7 +291,7 @@ export default {
           cred: "",
         },
         {
-          full: "scenic/scenic-three.jpeg",
+          full: "scenic/scenic-three.jpg",
           thumb: "scenic/scenic-three-thumb.jpg",
           alt: "",
           caption: "",
@@ -305,7 +305,7 @@ export default {
           cred: "",
         },
         {
-          full: "scenic/scenic-five.jpeg",
+          full: "scenic/scenic-five.jpg",
           thumb: "scenic/scenic-five-thumb.jpg",
           alt: "",
           caption: "",
