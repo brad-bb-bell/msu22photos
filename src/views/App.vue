@@ -15,19 +15,19 @@
 
   <div>
     <Container>
-      <ImageBase :image="images[0].full" @show="show(0)" />
+      <ImageBase :image="images[0].thumb" @show="show(0)" />
       <ImageDouble
-        :imageLeft="images[1].full"
+        :imageLeft="images[1].thumb"
         :indexLeft="1"
-        :imageRight="images[2].full"
+        :imageRight="images[2].thumb"
         :indexRight="2"
         @show="show"
       />
-      <ImageBase :image="images[3].full" @show="show(3)" />
+      <ImageBase :image="images[3].thumb" @show="show(3)" />
       <ImageDouble
-        :imageLeft="images[4].full"
+        :imageLeft="images[4].thumb"
         :indexLeft="4"
-        :imageRight="images[5].full"
+        :imageRight="images[5].thumb"
         :indexRight="5"
         @show="show"
       />
@@ -171,42 +171,42 @@ export default {
       images: [
         {
           full: "academic-life/academic-one.jpeg",
-          thumb: "",
+          thumb: "academic-life/academic-one-thumb.jpg",
           alt: "",
           caption: "",
           cred: "Colter Peterson",
         },
         {
           full: "academic-life/academic-two.jpg",
-          thumb: "",
+          thumb: "academic-life/academic-two-thumb.jpg",
           alt: "",
           caption: "",
           cred: "",
         },
         {
           full: "academic-life/academic-three.jpeg",
-          thumb: "",
+          thumb: "academic-life/academic-three-thumb.jpg",
           alt: "",
           caption: "",
           cred: "",
         },
         {
           full: "academic-life/academic-four.jpg",
-          thumb: "",
+          thumb: "academic-life/academic-four-thumb.jpg",
           alt: "",
           caption: "",
           cred: "",
         },
         {
           full: "academic-life/academic-five.jpeg",
-          thumb: "",
+          thumb: "academic-life/academic-five-thumb.jpg",
           alt: "",
           caption: "",
           cred: "",
         },
         {
           full: "academic-life/academic-six.jpg",
-          thumb: "",
+          thumb: "academic-life/academic-six-thumb.jpg",
           alt: "",
           caption: "",
           cred: "",
