@@ -35,6 +35,94 @@
 
     <TextBase :headline="this.text[1].headline" :text="this.text[1].text" />
 
+    <Container>
+      <ImageBase :image="images[6].thumb" @show="show(6)" />
+      <ImageTriple
+        :imageLeft="images[7].thumb"
+        :indexLeft="7"
+        :imageCenter="images[8].thumb"
+        :indexCenter="8"
+        :imageRight="images[9].thumb"
+        :indexRight="9"
+        @show="show"
+      />
+      <ImageDouble
+        :imageLeft="images[10].thumb"
+        :indexLeft="10"
+        :imageRight="images[11].thumb"
+        :indexRight="11"
+        @show="show"
+      />
+      <ImageTriple
+        :imageLeft="images[12].thumb"
+        :indexLeft="12"
+        :imageCenter="images[13].thumb"
+        :indexCenter="13"
+        :imageRight="images[14].thumb"
+        :indexRight="14"
+        @show="show"
+      />
+      <ImageBase :image="images[15].thumb" @show="show(15)" />
+    </Container>
+
+    <TextBase :headline="this.text[2].headline" :text="this.text[2].text" />
+
+    <Container>
+      <ImageBase :image="images[16].thumb" @show="show(16)" />
+      <ImageDouble
+        :imageLeft="images[17].thumb"
+        :indexLeft="17"
+        :imageRight="images[18].thumb"
+        :indexRight="18"
+        @show="show"
+      />
+      <ImageTriple
+        :imageLeft="images[19].thumb"
+        :indexLeft="19"
+        :imageCenter="images[20].thumb"
+        :indexCenter="20"
+        :imageRight="images[21].thumb"
+        :indexRight="21"
+        @show="show"
+      />
+      <ImageDouble
+        :imageLeft="images[22].thumb"
+        :indexLeft="22"
+        :imageRight="images[23].thumb"
+        :indexRight="23"
+        @show="show"
+      />
+    </Container>
+
+    <TextBase :headline="this.text[3].headline" :text="this.text[3].text" />
+
+    <Container>
+      <ImageBase :image="images[24].thumb" @show="show(24)" />
+      <ImageTriple
+        :imageLeft="images[25].thumb"
+        :indexLeft="25"
+        :imageCenter="images[26].thumb"
+        :indexCenter="26"
+        :imageRight="images[27].thumb"
+        :indexRight="27"
+        @show="show"
+      />
+      <ImageBase :image="images[28].thumb" @show="show(28)" />
+      <ImageDouble
+        :imageLeft="images[29].thumb"
+        :indexLeft="29"
+        :imageRight="images[30].thumb"
+        :indexRight="30"
+        @show="show"
+      />
+      <ImageBase :image="images[31].thumb" @show="show(31)" />
+    </Container>
+
+    <div class="w-[800px] max-w-[80%] flex flex-col items-center my-[80px] mx-auto">
+      <hr class="w-24 h-1 bg-[#eab715] mb-5" />
+      <p class="text-center text-sm">Developed by the MSU University Communications team</p>
+    </div>
+
     <Teleport to="body">
       <TheLightbox :images="images" :index="index" v-if="visible" @close="hide()" />
     </Teleport>
@@ -43,16 +131,18 @@
 
 <script>
 import TheLightbox from "../components/TheLightbox.vue";
-import ImageDouble from "../components/ImageDouble.vue";
 import ImageBase from "../components/ImageBase.vue";
-import Container from "../components/ContainerBase.vue";
+import ImageDouble from "../components/ImageDouble.vue";
+import ImageTriple from "../components/ImageTriple.vue";
 import TextBase from "../components/TextBase.vue";
+import Container from "../components/ContainerBase.vue";
 
 export default {
   components: {
     TheLightbox,
-    ImageDouble,
     ImageBase,
+    ImageDouble,
+    ImageTriple,
     TextBase,
     Container,
   },
@@ -84,48 +174,56 @@ export default {
           thumb: "",
           alt: "",
           caption: "",
+          cred: "Colter Peterson",
         },
         {
           full: "academic-life/academic-two.jpg",
           thumb: "",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "academic-life/academic-three.jpeg",
           thumb: "",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "academic-life/academic-four.jpg",
           thumb: "",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "academic-life/academic-five.jpeg",
           thumb: "",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "academic-life/academic-six.jpg",
           thumb: "",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "campus-life/campus-one.jpg",
           thumb: "campus-life/campus-one-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "campus-life/campus-two.jpg",
           thumb: "campus-life/campus-two-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "campus-life/campus-three.jpeg",
@@ -144,24 +242,28 @@ export default {
           thumb: "campus-life/campus-five-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "campus-life/campus-six.jpg",
           thumb: "campus-life/campus-six-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "campus-life/campus-seven.jpg",
           thumb: "campus-life/campus-seven-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "campus-life/campus-eight.jpg",
           thumb: "campus-life/campus-eight-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "campus-life/campus-nine.jpg",
@@ -186,96 +288,112 @@ export default {
           thumb: "scenic/scenic-two-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "scenic/scenic-three.jpeg",
           thumb: "scenic/scenic-three-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "scenic/scenic-four.jpg",
           thumb: "scenic/scenic-four-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "scenic/scenic-five.jpeg",
           thumb: "scenic/scenic-five-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "scenic/scenic-six.jpg",
           thumb: "scenic/scenic-six-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "scenic/scenic-seven.jpg",
           thumb: "scenic/scenic-seven-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "scenic/scenic-eight.jpg",
           thumb: "scenic/scenic-eight-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "sports/sports-one.jpg",
           thumb: "sports/sports-one-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "sports/sports-two.jpg",
           thumb: "sports/sports-two-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "sports/sports-three.jpg",
           thumb: "sports/sports-three-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "sports/sports-four.jpg",
           thumb: "sports/sports-four-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "sports/sports-five.jpg",
           thumb: "sports/sports-five-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "sports/sports-six.jpg",
           thumb: "sports/sports-six-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "sports/sports-seven.jpg",
           thumb: "sports/sports-seven-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "sports/sports-eight.jpg",
           thumb: "sports/sports-eight-thumb.jpg",
           alt: "",
           caption: "",
+          cred: "",
         },
         {
           full: "title-image.jpg",
           thumb: "",
           alt: "",
           caption: "",
+          cred: "",
         },
       ],
     };

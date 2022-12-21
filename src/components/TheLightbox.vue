@@ -7,16 +7,18 @@
         </TheCircle>
       </button>
 
+      <div class="fixed" @click.stop="">
+        <img :src="require(`@/assets/images/${images[position].full}`)" />
+        <p class="absolute right-1 bottom-1 text-sm bg-black opacity-50 text-white">
+          Photo: {{ images[position].cred }}
+        </p>
+      </div>
+
       <button class="absolute left-3" @click.stop="prev" v-if="hasPrev()">
         <TheCircle>
           <PrevIcon />
         </TheCircle>
       </button>
-
-      <div @click.stop="">
-        <img :src="require(`@/assets/images/${images[position].full}`)" />
-      </div>
-
       <button class="absolute right-3" @click.stop="next" v-if="hasNext()">
         <TheCircle>
           <NextIcon />
