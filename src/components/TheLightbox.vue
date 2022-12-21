@@ -4,7 +4,7 @@
       <div class="fixed" @click.stop="">
         <img :src="require(`@/assets/images/${images[position].full}`)" :alt="images[position].alt" />
 
-        <p class="absolute right-1 bottom-1 text-sm bg-black text-white p-1 rounded">
+        <p class="absolute right-1 bottom-1 text-xs bg-black text-white p-1 rounded">
           MSU Photo by {{ photographers[images[position].cred] }}
         </p>
       </div>

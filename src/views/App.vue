@@ -15,121 +15,111 @@
       </div>
     </div>
 
-    <TextBase :headline="this.text[0].headline" :text="this.text[0].text" />
+    <Container>
+      <TextBase :headline="this.text[0].headline" :text="this.text[0].text" />
 
-    <div>
-      <Container>
-        <ImageBase :image="images[0].thumb" @show="show(0)" />
-        <ImageDouble
-          :imageLeft="images[1].thumb"
-          :indexLeft="1"
-          :imageRight="images[2].thumb"
-          :indexRight="2"
-          @show="show"
-        />
-        <ImageBase :image="images[3].thumb" @show="show(3)" />
-        <ImageDouble
-          :imageLeft="images[4].thumb"
-          :indexLeft="4"
-          :imageRight="images[5].thumb"
-          :indexRight="5"
-          @show="show"
-        />
-      </Container>
+      <ImageBase :image="images[0].thumb" @show="show(0)" />
+      <ImageDouble
+        :imageLeft="images[1].thumb"
+        :indexLeft="1"
+        :imageRight="images[2].thumb"
+        :indexRight="2"
+        @show="show"
+      />
+      <ImageBase :image="images[3].thumb" @show="show(3)" />
+      <ImageDouble
+        :imageLeft="images[4].thumb"
+        :indexLeft="4"
+        :imageRight="images[5].thumb"
+        :indexRight="5"
+        @show="show"
+      />
 
       <TextBase :headline="this.text[1].headline" :text="this.text[1].text" />
 
-      <Container>
-        <ImageBase :image="images[6].thumb" @show="show(6)" />
-        <ImageTriple
-          :imageLeft="images[7].thumb"
-          :indexLeft="7"
-          :imageCenter="images[8].thumb"
-          :indexCenter="8"
-          :imageRight="images[9].thumb"
-          :indexRight="9"
-          @show="show"
-        />
-        <ImageDouble
-          :imageLeft="images[10].thumb"
-          :indexLeft="10"
-          :imageRight="images[11].thumb"
-          :indexRight="11"
-          @show="show"
-        />
-        <ImageTriple
-          :imageLeft="images[12].thumb"
-          :indexLeft="12"
-          :imageCenter="images[13].thumb"
-          :indexCenter="13"
-          :imageRight="images[14].thumb"
-          :indexRight="14"
-          @show="show"
-        />
-        <ImageBase :image="images[15].thumb" @show="show(15)" />
-      </Container>
+      <ImageBase :image="images[6].thumb" @show="show(6)" />
+      <ImageTriple
+        :imageLeft="images[7].thumb"
+        :indexLeft="7"
+        :imageCenter="images[8].thumb"
+        :indexCenter="8"
+        :imageRight="images[9].thumb"
+        :indexRight="9"
+        @show="show"
+      />
+      <ImageDouble
+        :imageLeft="images[10].thumb"
+        :indexLeft="10"
+        :imageRight="images[11].thumb"
+        :indexRight="11"
+        @show="show"
+      />
+      <ImageTriple
+        :imageLeft="images[12].thumb"
+        :indexLeft="12"
+        :imageCenter="images[13].thumb"
+        :indexCenter="13"
+        :imageRight="images[14].thumb"
+        :indexRight="14"
+        @show="show"
+      />
+      <ImageBase :image="images[15].thumb" @show="show(15)" />
 
       <TextBase :headline="this.text[2].headline" :text="this.text[2].text" />
 
-      <Container>
-        <ImageBase :image="images[16].thumb" @show="show(16)" />
-        <ImageDouble
-          :imageLeft="images[17].thumb"
-          :indexLeft="17"
-          :imageRight="images[18].thumb"
-          :indexRight="18"
-          @show="show"
-        />
-        <ImageTriple
-          :imageLeft="images[19].thumb"
-          :indexLeft="19"
-          :imageCenter="images[20].thumb"
-          :indexCenter="20"
-          :imageRight="images[21].thumb"
-          :indexRight="21"
-          @show="show"
-        />
-        <ImageDouble
-          :imageLeft="images[22].thumb"
-          :indexLeft="22"
-          :imageRight="images[23].thumb"
-          :indexRight="23"
-          @show="show"
-        />
-      </Container>
+      <ImageBase :image="images[16].thumb" @show="show(16)" />
+      <ImageDouble
+        :imageLeft="images[17].thumb"
+        :indexLeft="17"
+        :imageRight="images[18].thumb"
+        :indexRight="18"
+        @show="show"
+      />
+      <ImageTriple
+        :imageLeft="images[19].thumb"
+        :indexLeft="19"
+        :imageCenter="images[20].thumb"
+        :indexCenter="20"
+        :imageRight="images[21].thumb"
+        :indexRight="21"
+        @show="show"
+      />
+      <ImageDouble
+        :imageLeft="images[22].thumb"
+        :indexLeft="22"
+        :imageRight="images[23].thumb"
+        :indexRight="23"
+        @show="show"
+      />
 
       <TextBase :headline="this.text[3].headline" :text="this.text[3].text" />
 
-      <Container>
-        <ImageBase :image="images[24].thumb" @show="show(24)" />
-        <ImageTriple
-          :imageLeft="images[25].thumb"
-          :indexLeft="25"
-          :imageCenter="images[26].thumb"
-          :indexCenter="26"
-          :imageRight="images[27].thumb"
-          :indexRight="27"
-          @show="show"
-        />
-        <ImageBase :image="images[28].thumb" @show="show(28)" />
-        <ImageDouble
-          :imageLeft="images[29].thumb"
-          :indexLeft="29"
-          :imageRight="images[30].thumb"
-          :indexRight="30"
-          @show="show"
-        />
-        <ImageBase :image="images[31].thumb" @show="show(31)" />
-      </Container>
+      <ImageBase :image="images[24].thumb" @show="show(24)" />
+      <ImageTriple
+        :imageLeft="images[25].thumb"
+        :indexLeft="25"
+        :imageCenter="images[26].thumb"
+        :indexCenter="26"
+        :imageRight="images[27].thumb"
+        :indexRight="27"
+        @show="show"
+      />
+      <ImageBase :image="images[28].thumb" @show="show(28)" />
+      <ImageDouble
+        :imageLeft="images[29].thumb"
+        :indexLeft="29"
+        :imageRight="images[30].thumb"
+        :indexRight="30"
+        @show="show"
+      />
+      <ImageBase :image="images[31].thumb" @show="show(31)" />
 
       <Teleport to="body">
         <TheLightbox :images="images" :photographers="photographers" :index="index" v-if="visible" @close="hide()" />
       </Teleport>
 
-      <div>
-        <p class="text-center text-sm my-10 dark:text-white">Developed by the MSU University Communications team</p>
-      </div>
-    </div>
+      <p class="text-center text-sm py-10 dark:text-white">Developed by the MSU University Communications team</p>
+    </Container>
   </div>
 </template>
 
