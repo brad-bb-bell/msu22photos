@@ -2,9 +2,10 @@
   <div class="fixed w-screen h-screen top-0 bg-black">
     <div class="w-full h-full flex justify-center items-center">
       <div class="fixed" @click.stop="">
-        <img :src="require(`@/assets/images/${images[position].full}`)" />
-        <p class="absolute right-1 bottom-1 text-sm bg-black opacity-50 text-white px-1 rounded">
-          Photo: {{ images[position].cred }}
+        <img :src="require(`@/assets/images/${images[position].full}`)" :alt="images[position].alt" />
+
+        <p class="absolute right-1 bottom-1 text-sm bg-black text-white p-1 rounded">
+          MSU Photo by {{ photographers[images[position].cred] }}
         </p>
       </div>
       <button class="absolute top-3 right-3" @click="$emit('close')">
@@ -40,6 +41,7 @@ export default {
   },
   props: {
     images: Array,
+    photographers: Array,
     index: Number,
   },
   data() {
