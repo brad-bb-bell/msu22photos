@@ -200,7 +200,7 @@ export default {
         {
           full: "academic-life/academic-four.jpg",
           thumb: "academic-life/academic-four-thumb.jpg",
-          alt: "Sheikh Parvez, a doctoral student in MSU’s materials science, tests a device designed to stimulate and control 2D quantum materials with radio frequency excitations. (MSU Photo by Adrian Sanchez Gonzalez)",
+          alt: "Sheikh Parvez, a doctoral student in MSU's materials science, tests a device designed to stimulate and control 2D quantum materials with radio frequency excitations. (MSU Photo by Adrian Sanchez Gonzalez)",
           cred: 1,
         },
         {
@@ -218,7 +218,7 @@ export default {
         {
           full: "campus-life/campus-one.jpg",
           thumb: "campus-life/campus-one-thumb.jpg",
-          alt: "A student on a snowboard slides down a rail as part of MSU’s inaugural “Rail Jam” freestyle snowboard and ski competition held on a compact slopestyle course. The competition was held in front of Rendezvous Dining Pavilion on Montana State University’s campus. (MSU Photo by Kelly Gorham)",
+          alt: "A student on a snowboard slides down a rail as part of MSU's inaugural “Rail Jam” freestyle snowboard and ski competition held on a compact slopestyle course. The competition was held in front of Rendezvous Dining Pavilion on Montana State University's campus. (MSU Photo by Kelly Gorham)",
           cred: 2,
         },
         {
@@ -230,7 +230,7 @@ export default {
         {
           full: "campus-life/campus-three.jpg",
           thumb: "campus-life/campus-three-thumb.jpg",
-          alt: "A young Montana State University fan sits on Champ’s lap during MSU’s homecoming pep rally held in downtown Bozeman. The fan faces toward the crowd with a smile on her face for being briefly included in the pep rally. (MSU Photo by Colter Peterson)",
+          alt: "A young Montana State University fan sits on Champ's lap during MSU's homecoming pep rally held in downtown Bozeman. The fan faces toward the crowd with a smile on her face for being briefly included in the pep rally. (MSU Photo by Colter Peterson)",
           cred: 0,
         },
         {
@@ -248,7 +248,7 @@ export default {
         {
           full: "campus-life/campus-six.jpg",
           thumb: "campus-life/campus-six-thumb.jpg",
-          alt: "Two volunteers carrying a large couch squeeze into an elevator in a campus residence hall during Montana State University’s Move-In weekend. They are laughing at the situation. (MSU Photo by Colter Peterson)",
+          alt: "Two volunteers carrying a large couch squeeze into an elevator in a campus residence hall during Montana State University's Move-In weekend. They are laughing at the situation. (MSU Photo by Colter Peterson)",
           cred: 0,
         },
         {
@@ -272,7 +272,7 @@ export default {
         {
           full: "campus-life/campus-ten.jpg",
           thumb: "campus-life/campus-ten-thumb.jpg",
-          alt: "Two graduating students embrace after receiving their diplomas at Montana State University’s spring commencement ceremony. (MSU Photo by Adrian Sanchez Gonzalez)",
+          alt: "Two graduating students embrace after receiving their diplomas at Montana State University's spring commencement ceremony. (MSU Photo by Adrian Sanchez Gonzalez)",
           cred: 1,
         },
         {
@@ -296,13 +296,13 @@ export default {
         {
           full: "scenic/scenic-four.jpg",
           thumb: "scenic/scenic-four-thumb.jpg",
-          alt: "A student walks underneath orange fall foliage on Montana State University’s campus. (MSU Photo by Colter Peterson)",
+          alt: "A student walks underneath orange fall foliage on Montana State University's campus. (MSU Photo by Colter Peterson)",
           cred: 0,
         },
         {
           full: "scenic/scenic-five.jpg",
           thumb: "scenic/scenic-five-thumb.jpg",
-          alt: "A hot air balloon hovers in the sky over what’s commonly called “the noodle” sculpture on Montana State University’s campus on a fall afternoon. (MSU Photo by Colter Peterson)",
+          alt: "A hot air balloon hovers in the sky over what's commonly called “the noodle” sculpture on Montana State University's campus on a fall afternoon. (MSU Photo by Colter Peterson)",
           cred: 0,
         },
         {
@@ -314,13 +314,13 @@ export default {
         {
           full: "scenic/scenic-seven.jpg",
           thumb: "scenic/scenic-seven-thumb.jpg",
-          alt: "A person walks past Jabs Hall on Montana State University’s campus after a snowstorm. Snow outlines every branch on nearby trees. (MSU Photo by Adrian Sanchez Gonzalez)",
+          alt: "A person walks past Jabs Hall on Montana State University's campus after a snowstorm. Snow outlines every branch on nearby trees. (MSU Photo by Adrian Sanchez Gonzalez)",
           cred: 1,
         },
         {
           full: "scenic/scenic-eight.jpg",
           thumb: "scenic/scenic-eight-thumb.jpg",
-          alt: "Undergraduate student Jeremiah Peterson rides horseback to round up a herd of angus cows at MSU’s Red Bluff Research Ranch. (MSU Photo by Adrian Sanchez Gonzalez)",
+          alt: "Undergraduate student Jeremiah Peterson rides horseback to round up a herd of angus cows at MSU's Red Bluff Research Ranch. (MSU Photo by Adrian Sanchez Gonzalez)",
           cred: 1,
         },
         {
@@ -344,7 +344,7 @@ export default {
         {
           full: "sports/sports-four.jpg",
           thumb: "sports/sports-four-thumb.jpg",
-          alt: "The College GameDay bus arrives at Montana State University’s campus. Students greet the bus upon its arrival. A student-made signs says, “Check my math. 7-0 (MSU’s football record) is greater than 4-3 (UM’s football record). Go Cats Go.” (MSU Photo by Kelly Gorham)",
+          alt: "The College GameDay bus arrives at Montana State University's campus. Students greet the bus upon its arrival. A student-made signs says, “Check my math. 7-0 (MSU's football record) is greater than 4-3 (UM's football record). Go Cats Go.” (MSU Photo by Kelly Gorham)",
           cred: 2,
         },
         {
@@ -356,7 +356,7 @@ export default {
         {
           full: "sports/sports-six.jpg",
           thumb: "sports/sports-six-thumb.jpg",
-          alt: "Montana State University women’s basketball team cheers in excitement on the court during the home opener for their season in the Brick Breeden Fieldhouse. (MSU Photo by Kelly Gorham)",
+          alt: "Montana State University women's basketball team cheers in excitement on the court during the home opener for their season in the Brick Breeden Fieldhouse. (MSU Photo by Kelly Gorham)",
           cred: 2,
         },
         {
