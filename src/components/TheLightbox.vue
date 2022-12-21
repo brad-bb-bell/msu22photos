@@ -3,7 +3,7 @@
     <div class="w-full h-full flex justify-center items-center">
       <div class="fixed" @click.stop="">
         <img :src="require(`@/assets/images/${images[position].full}`)" />
-        <p class="absolute right-1 bottom-1 text-sm bg-black opacity-50 text-white">
+        <p class="absolute right-1 bottom-1 text-sm bg-black opacity-50 text-white px-1 rounded">
           Photo: {{ images[position].cred }}
         </p>
       </div>

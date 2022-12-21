@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <ImageBase :image="images[32].full" />
+    <ImageBase image="title-image.jpg" />
     <div class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]">
       <h1 class="text-center mb-6 text-2xl md:text-5xl xl:text-7xl font-serif font-bold text-white">
         An Extraordinary Year
@@ -384,13 +384,6 @@ export default {
         {
           full: "sports/sports-eight.jpg",
           thumb: "sports/sports-eight-thumb.jpg",
-          alt: "",
-          caption: "",
-          cred: "",
-        },
-        {
-          full: "title-image.jpg",
-          thumb: "",
           alt: "",
           caption: "",
           cred: "",
