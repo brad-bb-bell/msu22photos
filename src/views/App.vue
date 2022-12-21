@@ -118,9 +118,8 @@
       <ImageBase :image="images[31].thumb" @show="show(31)" />
     </Container>
 
-    <div class="w-[800px] max-w-[80%] flex flex-col items-center my-[80px] mx-auto">
-      <hr class="w-24 h-1 bg-[#eab715] mb-5" />
-      <p class="text-center text-sm">Developed by the MSU University Communications team</p>
+    <div>
+      <p class="text-center text-sm my-10">Developed by the MSU University Communications team</p>
     </div>
 
     <Teleport to="body">
