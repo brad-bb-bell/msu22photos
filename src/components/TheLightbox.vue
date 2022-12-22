@@ -9,7 +9,7 @@
           v-touch:swipe.right="prev"
         />
 
-        <p class="absolute right-1 bottom-1 text-xs bg-black text-white p-1 rounded">
+        <p class="absolute left-1 bottom-1 text-xs bg-black text-white p-1 rounded">
           MSU Photo by {{ photographers[images[position].cred] }}
         </p>
       </div>
