@@ -2,7 +2,12 @@
   <div class="fixed w-screen h-screen top-0 bg-black">
     <div class="w-full h-full flex justify-center items-center">
       <div class="fixed" @click.stop="">
-        <img :src="require(`@/assets/images/${images[position].full}`)" :alt="images[position].alt" />
+        <img
+          :src="require(`@/assets/images/${images[position].full}`)"
+          :alt="images[position].alt"
+          v-touch:swipe.left="next"
+          v-touch:swipe.right="prev"
+        />
 
         <p class="absolute right-1 bottom-1 text-xs bg-black text-white p-1 rounded">
           MSU Photo by {{ photographers[images[position].cred] }}
